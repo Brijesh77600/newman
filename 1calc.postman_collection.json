@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "723da4ca-309e-4357-958b-227e86b69a96",
+		"_postman_id": "574ace1c-62de-4748-b50f-9f69cbe6ff5b",
 		"name": "calc",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -14,7 +14,7 @@
 						"exec": [
 							"//to check status code\r",
 							"pm.test(\"Status code is 200\",function(){\r",
-							"    pm.response.to.have.status(200);\r",
+							"    pm.response.to.have.status(20);\r",
 							"});\r",
 							"\r",
 							"pm.test(\"body matches\",function(){\r",
