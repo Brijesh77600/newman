@@ -1,0 +1,78 @@
+{
+	"info": {
+		"_postman_id": "099fb0fa-c58c-41c5-b03f-88f52fec0bfd",
+		"name": "with_authonticate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "vp123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "username",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Base_URL}}/basic-auth/username/vp123",
+					"host": [
+						"{{Base_URL}}"
+					],
+					"path": [
+						"basic-auth",
+						"username",
+						"vp123"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "vp123",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "name",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

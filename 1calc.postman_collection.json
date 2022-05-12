@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "723da4ca-309e-4357-958b-227e86b69a96",
+		"name": "calc",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "calc1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//to check status code\r",
+							"pm.test(\"Status code is 200\",function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"body matches\",function(){\r",
+							" const res = pm.response.json();\r",
+							" pm.expect(res.total).to.eql(525);\r",
+							"});\r",
+							"pm.test(\"calculation\",function(){\r",
+							" const res = pm.response.json();\r",
+							" const result = res.amount + res.tax;\r",
+							"    pm.expect(res.total).to.eql(result);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"calculation\",function(){\r",
+							" const res = pm.response.json();\r",
+							" const result = res.amount + res.tax;\r",
+							"    pm.expect(res.total).to.eql(result);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item\": \"apple\",\r\n    \"amount\": \"100\",\r\n    \"tax\": \"10\",\r\n    \"total\": \"110\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1f1e0857-e7f0-426e-93c1-16720f06a660.mock.pstmn.io/calc2",
+					"protocol": "https",
+					"host": [
+						"1f1e0857-e7f0-426e-93c1-16720f06a660",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"calc2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "calc2-env",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"calculation\",function(){\r",
+							" const res = pm.response.json();\r",
+							" const result = res.amount + res.tax;\r",
+							"    pm.expect(res.total).to.eql(result);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"calculation\",function(){\r",
+							" const res = pm.response.json();\r",
+							" const result = parseInt(pm.environment.get(\"val1\")) + parseInt(pm.environment.get(\"val2\"));\r",
+							" console.log(result)\r",
+							"    pm.expect(res.total).to.eql(result);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"item\": \"apple\",\r\n    \"amount\": \"100\",\r\n    \"tax\": \"10\",\r\n    \"total\": \"110\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://1f1e0857-e7f0-426e-93c1-16720f06a660.mock.pstmn.io/calc2",
+					"protocol": "https",
+					"host": [
+						"1f1e0857-e7f0-426e-93c1-16720f06a660",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"calc2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
