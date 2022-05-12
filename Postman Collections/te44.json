@@ -15,7 +15,7 @@
             "exec": [
               "//to check status code\r",
               "pm.test(\"Status code is 200\",function(){\r",
-              "    pm.response.to.have.status(20);\r",
+              "    pm.response.to.have.status(200);\r",
               "});\r",
               "\r",
               "pm.test(\"body matches\",function(){\r",
@@ -38,7 +38,7 @@
           }
         }
       ],
-      "_postman_id": "7fb82d80-dcdf-4637-a6e2-a82095db8d78",
+      "id": "7fb82d80-dcdf-4637-a6e2-a82095db8d78",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -83,7 +83,7 @@
           }
         }
       ],
-      "_postman_id": "70fa7e4a-df3c-4802-933c-488aa0088211",
+      "id": "70fa7e4a-df3c-4802-933c-488aa0088211",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
